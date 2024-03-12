@@ -1,0 +1,878 @@
+// 最外包裹元素
+#wrapper {
+
+    // 頭部
+    #header {
+
+        // #region上邊開始
+        .headTop {
+            background-color: #eaeaea;
+            height: 30px;
+
+            .headTopMain {
+                width: 1200px;
+                margin: 0px auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                line-height: 30px;
+
+                .left {
+                    display: flex;
+                    flex-direction: row;
+                    // line-height: 30px;
+
+                    h5 {
+                        margin-right: 5px;
+                    }
+
+                    p {
+                        a {
+                            &:first-child {
+                                border-right: 1px solid #b3aeae;
+                                margin-right: 1px;
+                                padding-right: 5px;
+                            }
+                        }
+                    }
+                }
+
+                .right {
+                    nav {
+
+                        a {
+
+                            margin-right: 10px;
+                            padding-right: 10px;
+                            border-right: 1px solid #b3aeae;
+
+                            &:last-child {
+                                border: none;
+                                margin-right: 0px;
+                                padding-right: 0px;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+        // #endregion上邊結束
+
+        // #region下邊開始
+        .headBottom {
+
+            // 版心
+            .headBottomMain {
+                width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .logo {
+                    a {
+                        img {
+                            width: 175px;
+                            height: 56px;
+                            margin: 25px 45px;
+                        }
+                    }
+                }
+
+                .search {
+                    margin-top: 35px;
+                    display: flex;
+
+                    input {
+
+                        // 文字框
+                        &:first-child {
+                            box-sizing: border-box;
+                            width: 490px;
+                            height: 32px;
+                            padding: 0 4px;
+                            border: 3px solid #ea4a36;
+                        }
+
+                        // 提交按鈕
+                        &:last-child {
+                            width: 68px;
+                            height: 32px;
+                            color: #fff;
+                            background-color: #ea4a36;
+                            border: none;
+                        }
+
+                        //修飾placeholder 
+                        &::-webkit-input-placeholder {
+                            color: yellowgreen;
+                        }
+                    }
+                }
+            }
+        }
+
+        // #endregion下邊結束
+
+    }
+
+    // #region分類導航開始
+    #navWrap {
+        border-bottom: 2px solid #e1251b;
+
+        // 版心
+        .navWrapMain {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+
+            a {
+                margin: 0 22px;
+                font-size: 16px;
+                color: #333;
+                line-height: 50px;
+
+                &:first-child {
+                    width: 210px;
+                    height: 50px;
+                    background-color: #e1251b;
+                    color: #fff;
+                    font-size: 14px;
+                    font-weight: bold;
+                    text-align: center;
+                    line-height: 50px;
+                }
+            }
+        }
+    }
+
+    // #endregion分類導航結束
+
+    // #region內容區開始
+    #content {
+
+        // 版心元素
+        .contentMain {
+            width: 1200px;
+            margin: 15px auto 0;
+
+            // 路徑導航
+            #navPath {
+                padding: 9px 15px 9px 0;
+                font-size: 0px;
+
+                a {
+                    font-size: 12px;
+                }
+
+                i {
+                    padding: 0 5px;
+                    font-size: 12px;
+                }
+            }
+
+            // 路徑導航結束
+
+            // 中間區 開始
+            #center {
+                margin: 5px 0 15px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                #left {
+                    width: 400px;
+
+                    #leftTop {
+                        width: 400px;
+                        position: relative;
+
+                        #smallPic {
+                            width: 400px;
+                            height: 400px;
+                            border: 1px solid #dfdfdf;
+                            position: relative;
+
+                            img {
+                                width: 400px;
+                                height: 400px;
+                            }
+
+                            .mask {
+                                width: 200px;
+                                height: 200px;
+                                background-color: rgba(255, 255, 255, .5);
+                                border: 1px solid #ddd;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                            }
+                        }
+
+                        #bigPic {
+                            width: 400px;
+                            height: 400px;
+                            border: 1px solid #ddd;
+                            left: 420px;
+                            top: 0;
+                            position: absolute;
+                            overflow: hidden;
+
+                            img {
+                                width: 800px;
+                                height: 800px;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                            }
+                        }
+                    }
+
+                    #leftBottom {
+                        width: 400px;
+                        margin-top: 5px;
+                        display: flex;
+                        flex-direction: row;
+
+                        a {
+                            width: 10px;
+                            height: 54px;
+                            border: 1px solid #ccc;
+                            background-color: #ebebeb;
+                            text-align: center;
+                            line-height: 54px;
+
+                            &:first-child {
+                                margin-right: 4px;
+                            }
+                        }
+
+                        #picList {
+                            width: 372px;
+                            height: 56px;
+                            display: flex;
+                            flex-direction: row;
+                            overflow: hidden;
+                            position: relative;
+
+                            ul {
+                                // font-size: 0;
+                                display: flex;
+                                position: absolute;
+                                transition: 0.4s;
+
+                                li {
+
+                                    width: 50px;
+                                    height: 50px;
+                                    border: 1px solid #ccc;
+                                    padding: 2px;
+                                    margin-right: 20px;
+
+                                    img {
+                                        width: 50px;
+                                        height: 50px;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                .right {
+                    width: 700px;
+
+                    // 上面
+                    .rightTop {
+                        h3 {
+                            font-size: 14px;
+                            line-height: 21px;
+                            margin-top: 15px;
+                        }
+
+                        >p {
+                            color: #e12228;
+                            margin-top: 15px;
+                        }
+
+                        .priceWrap {
+                            margin-top: 10px;
+                            line-height: 28px;
+                            background-color: #fee9ec;
+                            padding: 7px;
+
+                            .priceTop {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+
+                                .containerForFlexItem {
+                                    display: flex;
+                                    flex-direction: row;
+
+                                    >span {
+                                        margin-right: 15px;
+                                    }
+
+                                    .price {
+                                        display: flex;
+                                        flex-direction: row;
+                                        color: #c12;
+
+                                        >span {
+                                            font-size: 16px;
+                                        }
+
+                                        p {
+                                            font-size: 24px;
+                                            font-weight: bold;
+                                        }
+
+                                        i {
+                                            font-size: 12px;
+                                            color: #c12;
+                                        }
+                                    }
+                                }
+
+                                >p {
+                                    >span {}
+                                }
+                            }
+
+                            .priceBottom {
+                                display: flex;
+                                flex-direction: row;
+
+                                // 促銷
+                                >span {
+                                    margin-right: 15px;
+                                }
+
+                                // 加價購
+                                p {
+                                    width: 520px;
+                                    line-height: 28px;
+
+                                    >span {
+                                        color: #999;
+
+                                        //加價購
+                                        &:first-child {
+                                            background-color: #c81623;
+                                            padding: 3px;
+                                            color: #fff;
+
+                                        }
+                                    }
+                                }
+                            }
+
+
+                        }
+
+                        .support {
+                            margin-top: 10px;
+                            line-height: 28px;
+                            display: flex;
+                            flex-direction: row;
+
+                            >span {
+                                margin-right: 15px;
+
+                            }
+
+                            >p {
+                                color: #999;
+                            }
+                        }
+
+                        .address {
+                            border-bottom: 1px solid #ededed;
+                            padding-bottom: 5px;
+                            margin-top: 10px;
+                            line-height: 28px;
+                            display: flex;
+                            flex-direction: row;
+
+                            >span {
+                                margin-right: 15px;
+                            }
+
+                            >p {
+                                color: #999;
+                            }
+                        }
+
+                    }
+
+                    // 下面
+                    .rightBottom {
+                        margin-top: 10px;
+                        line-height: 28px;
+
+                        .choose {
+                            display: flex;
+                            flex-direction: row;
+
+                            .mark {
+                                height: 30px;
+                                background-color: snow;
+                                border: 1px solid #ddd;
+                                padding: 0 20px;
+                                margin-right: 20px;
+                                text-align: center;
+                                line-height: 30px;
+
+                                a {
+                                    color: red;
+                                    margin-left: 20px;
+                                }
+                            }
+                        }
+
+                        .chooseWrap {
+                            dl {
+                                margin-top: 13px;
+                                margin-bottom: 13px;
+                                display: flex;
+                                flex-direction: row;
+
+                                dt {
+                                    margin-right: 15px;
+
+                                }
+
+                                dd {
+                                    margin-right: 5px;
+                                    color: #666;
+                                    line-height: 24px;
+                                    padding: 2px 14px;
+                                    border-top: 1px solid #eee;
+                                    border-left: 1px solid #eee;
+                                    border-right: 1px solid #eee;
+                                    border-bottom: 1px solid #eee;
+
+                                    &:first-of-type {
+                                        color: red;
+                                    }
+                                }
+                            }
+                        }
+
+                        .addCart {
+                            display: flex;
+                            flex-direction: row;
+
+                            // justify-content: space-between;
+                            .count {
+                                width: 55px;
+                                margin-right: 15px;
+                                position: relative;
+
+                                input {
+                                    width: 38px;
+                                    height: 37px;
+                                    border: 1px solid #ddd;
+                                    color: #555;
+                                }
+
+                                a {
+                                    width: 15px;
+                                    height: 18px;
+                                    color: #666;
+                                    background-color: #f1f1f1;
+                                    position: absolute;
+                                    right: 1px;
+                                    text-align: center;
+                                    line-height: 18px;
+                                    border: 1px solid #ddd;
+
+                                    &:first-child {
+                                        top: 0;
+                                    }
+
+                                    &:last-child {
+                                        top: 20px;
+                                        border-top: 0;
+                                    }
+                                }
+                            }
+
+                            button {
+                                padding-left: 25px;
+                                padding-right: 25px;
+                                height: 36px;
+                                font-size: 16px;
+                                background-color: #e1251b;
+                                color: #fff;
+                                border: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 中間區 結束
+
+            // 商品詳請中間部分 開始
+            .goodDetailWrap {
+                width: 1200px;
+                margin: 30px auto 0;
+                display: flex;
+                flex-direction: row;
+
+                // 左側邊欄
+                .leftAside {
+                    width: 210px;
+                    border: 1px solid #ccc;
+
+                    .asidTop {
+                        display: flex;
+                        flex-direction: row;
+
+                        h4 {
+                            width: 105px;
+                            height: 40px;
+                            background-color: #fff;
+                            text-align: center;
+                            line-height: 40px;
+                            border-bottom: 1px solid #ccc;
+                            border-top: 3px solid #fff;
+
+                            &.active {
+                                border-top: 3px solid #e1251b;
+                                width: 105px;
+                                line-height: 37px;
+                                text-align: center;
+                                line-height: 40px;
+                                border-bottom: none;
+                            }
+                        }
+                    }
+
+                    .asidContent {
+                        padding: 10px;
+
+                        div {
+                            display: none;
+
+                            &.active {
+                                display: block;
+
+                                ul {
+                                    &.goodlist1 {
+
+                                        li {
+                                            width: 50%;
+                                            border-bottom: 1px dashed #333;
+                                            line-height: 28px;
+                                            float: left;
+                                        }
+                                    }
+
+                                    &.goodlist2 {
+                                        margin: 5px 0 15px;
+
+                                        li {
+                                            border-bottom: 1px solid #ededed;
+
+                                            img {
+                                                width: 152px;
+                                            }
+
+                                            span {}
+
+                                            p {
+                                                font-size: 16px;
+                                                color: #c81623;
+                                            }
+
+                                            .button {
+                                                margin-top: 5px;
+                                                margin-bottom: 5px;
+                                                text-align: center;
+
+                                                a {
+                                                    color: #8c8c8c;
+                                                    padding: 2px 14px;
+                                                    line-height: 18px;
+                                                    border: 1px solid #8c8c8c;
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // 右側結構
+                .rightDetail {
+                    width: 980px;
+                    margin-left: 8px;
+
+                    .chooseBox {
+                        border: 1px solid #ddd;
+                        margin-bottom: 15px;
+
+                        h4 {
+                            border-bottom: 1px solid #ddd;
+                            background-color: #f1f1f1;
+                            color: #333;
+                            padding: 0 5px 5px 15px;
+                        }
+
+                        .listWrap {
+                            height: 170px;
+                            padding-top: 10px;
+                            display: flex;
+                            flex-direction: row;
+
+                            .left {
+                                width: 127px;
+                                height: 165px;
+                                position: relative;
+                                text-align: center;
+
+                                img {
+                                    width: 87px;
+                                    height: 130px;
+
+                                    margin: 0 auto;
+                                }
+
+                                p {
+                                    color: #c81623;
+                                    font-size: 16px;
+                                }
+
+                                i {
+                                    position: absolute;
+                                    top: 48px;
+                                    right: -25px;
+                                    font-size: 16px;
+                                }
+                            }
+
+                            .middle {
+                                width: 668px;
+                                height: 165px;
+                                display: flex;
+                                flex-direction: row;
+                                text-align: center;
+
+                                li {
+                                    width: 127px;
+                                    margin-left: 20px;
+                                    margin-right: 20px;
+
+                                    img {
+                                        width: 120px;
+                                        height: 130px;
+                                    }
+
+                                    >span {}
+
+                                    div {
+                                        input {}
+
+                                        span {}
+                                    }
+                                }
+                            }
+
+                            .right {
+                                border-left: 1px solid #ddd;
+                                // display: flex;
+                                // flex-direction: row;
+                                width: 153px;
+                                height: 165px;
+                                padding-left: 20px;
+
+                                div {
+                                    margin-top: 10px;
+                                    margin-bottom: 10px;
+                                }
+
+                                p {
+                                    font-weight: bold;
+                                    margin-bottom: 10px;
+                                }
+
+                                i {
+                                    color: #b1191a;
+                                    font-size: 16px;
+                                    margin-bottom: 10px;
+                                }
+
+                                button {
+                                    padding: 10px 25px;
+                                    font-size: 16px;
+                                    color: #fff;
+                                    background-color: #e1251b;
+                                    border: none;
+                                }
+                            }
+                        }
+                    }
+
+                    // 選項卡開始
+                    .BottomDetail {
+                        .tabBtns {
+                            background-color: #ededed;
+                            display: flex;
+                            flex-direction: row;
+
+                            li {
+                                border-top: 1px solid #ddd;
+                                border-bottom: 1px solid #ddd;
+                                border-left: 1px solid #ddd;
+
+                                background-color: #fff;
+                                height: 40px;
+                                padding-left: 11px;
+                                padding-right: 11px;
+                                text-align: center;
+                                line-height: 40px;
+
+                                &.active {
+                                    background-color: red;
+
+                                    a {
+                                        color: #fff;
+
+                                    }
+                                }
+
+                                &:last-child {
+                                    border-right: 1px solid #ddd;
+                                }
+                            }
+                        }
+
+                        .tabContents {
+                            div {
+                                padding-left: 20px;
+                                line-height: 25px;
+                                display: none;
+
+                                &.active {
+                                    margin: 10px 0;
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 商品詳請中間部分 結束
+
+        }
+    }
+
+    // #endregion內容區結束
+
+    // #region右側側邊攔開始
+    .rightAside {
+        width: 300px;
+        height: 100%;
+        background-color: #7a6e6e;
+        transition: 0.3s;
+        position: fixed;
+        top: 0;
+
+        // 關閉狀態時要新增的樣式，此非rightAside的子元素
+        &.asideClose {
+            right: -294px;
+        }
+        // 展開狀態時要新增的樣式，此非rightAside的子元素
+        &.asideOpen {
+            right: 0;
+        }
+
+        .btns {
+            width: 35px;
+            height: 35px;
+            background-color: #7a6e6e;
+            border-radius: 5px 0 0 5px;
+            left: -29px;
+            background-size: 35px 35px;
+            position: absolute;
+
+            // 關閉狀態時要新增的樣式，此非rightAside的子元素
+            &.btnsClose {
+                background-image: url(/Images_02/fox_400x400.png);
+            }
+            // 展開狀態時要新增的樣式，此非rightAside的子元素
+            &.btnsOpen {
+                background-image: url(/Images_02/pngkey.com-minion-png-148130.png);
+            }
+        }
+
+        .content {
+            width: 294px;
+            background-color: bisque;
+            position: absolute;
+            left: 6px;
+            top: 0;
+            bottom: 0;
+            z-index: 999;
+        }
+
+        .navList {
+            position: absolute;
+            left: -29px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            li {
+                width: 35px;
+                height: 35px;
+                position: relative;
+                p {
+                    width: 35px;
+                    height: 35px;
+                    background-color: #7a6e6e;
+                    background-image: url(/Images_02/200x200_ball.png);
+                    background-size: contain;
+                    transition: 0.3s;
+
+                }
+
+                i {
+                    width: 62px;
+                    height: 35px;
+                    position: absolute;
+                    text-align: center;
+                    line-height: 35px;
+                    position: absolute;
+                    left: 35px;
+                    transition: 0.3s;
+                    top: 0;
+                    font-size: 14px;
+                    background-color: #7a6e6e;
+
+                }
+                &:hover{
+                    p{
+                        background-color: pink;
+                    }
+                    i{
+                        background-color: pink;
+                        left: -62px;
+                    }
+                }
+            }
+        }
+    }
+
+    // #endregion右側側邊攔結束
+
+}
