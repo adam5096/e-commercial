@@ -14,7 +14,7 @@ var goodData = {
         }
     ],
     imagessrc: [
-        { b: '/Images_02/200x200_chikorita.png', s: '/Images_02/200x200_chikorita.png' },
+        { b: '/e-commercial/Images_02/200x200_chikorita.png', s: '/e-commercial/Images_02/200x200_chikorita.png' },
         { b: '/Images_02/kirby_01_200x200.png', s: '/Images_02/kirby_01_200x200.png' },
         { b: '/Images_02/kirby_02_200x200.png', s: '/Images_02/kirby_02_200x200.png' },
         { b: '/Images_02/200x200_chikorita.png', s: '/Images_02/200x200_chikorita.png' },
