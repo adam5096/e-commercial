@@ -580,10 +580,10 @@
   position: absolute;
 }
 #wrapper .rightAside .btns.btnsClose {
-  background-image: url(/Images_02/fox_400x400.png);
+  background-image: url(/e-commercial/Images_02/fox_400x400.png);
 }
 #wrapper .rightAside .btns.btnsOpen {
-  background-image: url(/Images_02/pngkey.com-minion-png-148130.png);
+  background-image: url(/e-commercial/Images_02/pngkey.com-minion-png-148130.png);
 }
 #wrapper .rightAside .content {
   width: 294px;
@@ -609,16 +609,16 @@
   width: 35px;
   height: 35px;
   background-color: #7a6e6e;
-  background-image: url(/Images_02/200x200_ball.png);
+  background-image: url(/e-commercial/Images_02/200x200_ball.png);
   background-size: contain;
   transition: 0.3s;
 }
 #wrapper .rightAside .navList li i {
   width: 62px;
   height: 35px;
+  position: absolute;
   text-align: center;
   line-height: 35px;
-  position: absolute;
   left: 35px;
   transition: 0.3s;
   top: 0;
